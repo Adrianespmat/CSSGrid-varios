@@ -1,0 +1,40 @@
+body {
+    background-color: #c3bebe;
+    padding: 20px;
+}
+.media {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #fafafa;
+  border-radius: 10px;
+}
+
+.media img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.media-body h3 {
+  margin: 0 0 .3rem 0;
+}
+
+.media-anidada {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1rem;
+  background: #ffe9d3;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.media-anidada img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
