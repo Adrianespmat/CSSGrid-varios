@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+
+/* CONTENEDOR PRINCIPAL - Grid de 3 partes */
+
+.pagina {
+    min-height: 100vh;
+    /* Grid principal: header, contenido, footer */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+}
+
+
+/* HEADER COMPLETO - Grid con todas las secciones */
+
+.header-completo {
+    background-color: #333;
+    border-bottom: 2px solid #ccc;
+    padding: 15px 30px;
+    /* Grid principal del header: logo, navegación, búsqueda */
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    align-items: center;
+    gap: 30px;
+}
+
+
+/* Logo a la izquierda */
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Navegación - Grid para los 4 elementos */
+
+.navegacion {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 25px;
+}
+
+.nav-item {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/* Caja de búsqueda - Grid para input y botón */
+
+.busqueda {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+    max-width: 300px;
+    justify-self: end;
+}
+
+.busqueda-input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.busqueda-boton {
+    padding: 8px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* FOOTER OSCURO - Grid con 3 columnas */
+
+.footer-oscuro {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    /* Grid con 3 columnas: contacto izquierda, enlaces centro, copyright derecha */
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+
+/* Contacto a la izquierda */
+
+.contacto-izquierda {
+    justify-self: start;
+    font-weight: bold;
+}
+
+
+/* Enlaces en el centro */
+
+.enlaces-centro {
+    /* Grid para los enlaces con separadores */
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.enlace {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.separador {
+    color: #888;
+}
+
+
+/* Copyright a la derecha */
+
+.copyright-derecha {
+    justify-self: end;
+    font-size: 14px;
+    color: #ccc;
+}
+
+
+/* CONTENIDO (vacío) - Grid simple */
+
+@media (max-width: 600px) {
+    /* HEADER - Cambiar a disposición vertical */
+    .header-completo {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 15px;
+        padding: 15px 20px;
+        text-align: center;
+    }
+    .logo {
+        font-size: 20px;
+        justify-self: center;
+    }
+    .navegacion {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 10px;
+    }
+    .busqueda {
+        max-width: 100%;
+        justify-self: center;
+        width: 100%;
+    }
+    /* CONTENIDO - Estructura como en la imagen */
+    /* Título principal */
+    .titulo-principal {
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+        display: block;
+    }
+    /* Subtítulo Contacto */
+    .subtitulo-contacto {
+        font-size: 20px;
+        font-weight: bold;
+        color: #444;
+        margin-bottom: 5px;
+        display: block;
+    }
+    /* Email */
+    .email-contacto {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+        display: block;
+    }
+    /* Enlaces en línea */
+    .enlaces-contenido {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+    }
+    .enlace-contenido {
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+    }
+    .separador-contenido {
+        color: #888;
+    }
+    /* FOOTER - Cambiar a disposición vertical */
+    .footer-oscuro {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+    .contacto-izquierda {
+        justify-self: center;
+        order: 1;
+    }
+    .enlaces-centro {
+        order: 2;
+        justify-self: center;
+    }
+    .copyright-derecha {
+        justify-self: center;
+        order: 3;
+    }
+}

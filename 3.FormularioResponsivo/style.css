@@ -1,0 +1,119 @@
+        /* Contenedor del formulario */
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .formulario {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+        }
+        /* Título */
+        
+        .formulario h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 26px;
+            font-weight: 600;
+        }
+        /* GRID PRINCIPAL */
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        /* Campos completos */
+        
+        .full {
+            grid-column: 1 / 3;
+        }
+        /* Inputs */
+        
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+        /* Checkbox */
+        
+        .terminos {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            justify-content: left;
+        }
+        
+        .terminos input[type="checkbox"] {
+            margin: 0;
+            width: 16px;
+            height: 16px;
+        }
+        /* Botón */
+        
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #2eba56;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: #26a74c;
+        }
+        /* Responsive */
+        
+        @media (max-width: 600px) {
+            /* El grid pasa a 1 columna */
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            /* Todos los campos ocupan ancho completo */
+            .full {
+                grid-column: 1 / 2;
+            }
+            /* Ajuste de márgenes */
+            .formulario {
+                padding: 20px;
+                margin: 20px;
+            }
+            label {
+                margin-top: 10px;
+                display: block;
+            }
+            /* Botón más grande y separado */
+            button {
+                margin-top: 20px;
+                padding: 16px;
+                font-size: 16px;
+            }
+            /* Checkbox */
+            .terminos {
+                align-items: flex-start;
+                font-size: 14px;
+            }
+        }
