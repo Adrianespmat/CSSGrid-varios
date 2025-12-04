@@ -56,6 +56,7 @@ body {
 .nav-item {
     font-weight: bold;
     font-size: 16px;
+    color: white;
 }
 
 
@@ -79,8 +80,8 @@ body {
 
 .busqueda-boton {
     padding: 8px 20px;
-    background-color: #333;
-    color: white;
+    background-color: white;
+    color: black;
     border: none;
     border-radius: 4px;
     font-weight: bold;
